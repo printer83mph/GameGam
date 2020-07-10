@@ -7,12 +7,12 @@ public class CameraClick : MonoBehaviour
 
     public int interactableLayer = 8;
 
-    private Camera camera;
+    private Camera _camera;
 
     // Start is called before the first frame update
     void Start()
     {
-        camera = GetComponent<Camera>();
+        _camera = GetComponent<Camera>();
     }
 
 }
