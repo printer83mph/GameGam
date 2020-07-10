@@ -128,4 +128,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebf805b379c9574bab164371640fc51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackInfluence: 3
+  trackInfluence: 2
