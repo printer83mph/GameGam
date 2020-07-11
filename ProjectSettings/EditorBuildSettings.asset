@@ -17,7 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: 10aacc66ea832e6429a9fadf9f4bea0f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Levels/DialogueFail.unity
+    guid: b0ad4dd8d3d5d664a811ddb393257f0a
   - enabled: 1
     path: Assets/Scenes/Levels/Level2.unity
-    guid: 2d87b6af047aa91479856169e6383f41
+    guid: bab608d4abdf29647bdce782661bdadb
   m_configObjects: {}
