@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarSpawn : MonoBehaviour
 {
 
-    public GameObject[] spawnItems;
+    public GameObject[] carObjects;
     public Transform endPoint;
 
     public TrafficLight trafficLight;
@@ -45,8 +45,8 @@ public class CarSpawn : MonoBehaviour
                 }
             }
 
-            int index = Random.Range(0, spawnItems.Length);
-            GameObject newCar = Instantiate(spawnItems[index], transform.position, transform.rotation);
+            int index = Random.Range(0, carObjects.Length);
+            GameObject newCar = Instantiate(carObjects[index], transform.position, transform.rotation);
             Car newCarScript = newCar.GetComponent<Car>();
             newCarScript.spawner = this;
 

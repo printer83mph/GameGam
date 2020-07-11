@@ -74,8 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00b76082764a5c45adfdcd34af3c27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnItems:
+  carObjects:
   - {fileID: 3794619278845120056, guid: 221ef30489e51054c97e2c79cfaa9f72, type: 3}
+  - {fileID: 572591593890980144, guid: ca65d54f28c2e4f4e8cd846cc925b1a6, type: 3}
   endPoint: {fileID: 1011058129736173738}
   trafficLight: {fileID: 0}
   verticalTravel: 0

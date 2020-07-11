@@ -2,7 +2,6 @@
 
 public class Car : MonoBehaviour
 {
-
     public CarSpawn spawner;
     public float speed = 10f;
 
