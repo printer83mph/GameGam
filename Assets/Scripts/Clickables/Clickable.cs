@@ -11,18 +11,18 @@ public class Clickable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // give it our own method first (to avoid null pointer exception)
+        onClickDelegate += OnClick;
     }
 
     private void OnMouseDown()
     {
         onClickDelegate();
+    }
+
+    void OnClick()
+    {
+        // keep track of last click?? idk
     }
 
 }
