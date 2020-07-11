@@ -9,6 +9,9 @@ public class TrafficLight : MonoBehaviour
 
     public bool allowVertical;
 
+    public TrafficLightCrosswalk horizontalCrosswalk;
+    public TrafficLightCrosswalk verticalCrosswalk;
+
     private int stoppedCars; //the number of cars currently stopped at the light
     // Start is called before the first frame update
     void Start()
@@ -20,6 +23,8 @@ public class TrafficLight : MonoBehaviour
     void OnClick()
     {
         allowVertical = !allowVertical;
+        horizontalCrosswalk.changeLight();
+        verticalCrosswalk.changeLight();
         stoppedCars = 0; //previously stopped cars will now move on
         Debug.Log(allowVertical ? "Now Vertical" : "Now Horizontal");
     }
