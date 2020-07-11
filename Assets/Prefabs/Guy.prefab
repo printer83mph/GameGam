@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 289005913473654797}
   - component: {fileID: 5322012355987267313}
+  - component: {fileID: 4866793000883514883}
   m_Layer: 0
   m_Name: Guy
   m_TagString: Untagged
@@ -52,6 +53,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4866793000883514883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101431324614720183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df4cf2c37d02984ca9e9051bf903daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guyAnimator: {fileID: 5322012355987267313}
+  location: {fileID: 0}
+  levelExit: {fileID: 0}
+  nextScene: 
+  speed: 1
 --- !u!1 &3513784749207027192
 GameObject:
   m_ObjectHideFlags: 0
