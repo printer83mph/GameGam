@@ -1,41 +1,42 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
-[RequireComponent(typeof(GuyMovement))]
+[Serializable]
+public class CameraConfig
+{
+    public Transform cameraPos;
+    public IdlePoint switchPoint;
+}
 
+[RequireComponent(typeof(GuyMovement))]
 public class ToggleCameras : MonoBehaviour
 {
 
-    public Camera camera1;
-    public Camera camera2;
+    public CameraConfig[] camConfigs;
+    public Transform _camera;
 
-    public IdlePoint switchToCam1;
-    public IdlePoint switchToCam2;
-
-    private GuyMovement mover;
+    private GuyMovement _mover;
+    private Transform _targetTransform;
 
     // Start is called before the first frame update
     void Start()
     {
-        camera1.enabled = true;
-        camera2.enabled = false;
-
-        mover = GetComponent<GuyMovement>();
-
+        _mover = GetComponent<GuyMovement>();
+        _targetTransform = camConfigs[0].cameraPos;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (mover.location == switchToCam1 && !mover.isMoving())
+        if (!_mover.isMoving())
         {
-            camera1.enabled = true;
-            camera2.enabled = false;
-        } else if (mover.location == switchToCam2 && !mover.isMoving())
-        {
-            camera1.enabled = false;
-            camera2.enabled = true;
+            foreach (CameraConfig config in camConfigs)
+            {
+                if (config.switchPoint == _mover.location) _targetTransform = config.cameraPos;
+            }
         }
+
+        _camera.position = MathUtil.Damp(_camera.position, _targetTransform.position, 8f, Time.deltaTime);
+        _camera.rotation = MathUtil.Damp(_camera.rotation, _targetTransform.rotation, 2f, Time.deltaTime);
     }
 }
