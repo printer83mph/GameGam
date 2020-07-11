@@ -9,6 +9,7 @@ public class ToggleableLight : MonoBehaviour
     public IdlePoint[] idlePoints;
 
     public Light lightScript;
+
     private float _initialIntensity;
 
     private void Start()
