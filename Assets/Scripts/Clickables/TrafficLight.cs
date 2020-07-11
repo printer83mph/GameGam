@@ -1,9 +1,15 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Clickable))]
+[Serializable]
+public class TrafficLightConfig
+{
+    public Animator lightAnimator;
+    public bool horizontal;
+}
 
+[RequireComponent(typeof(Clickable))]
 public class TrafficLight : MonoBehaviour
 {
 
@@ -11,6 +17,7 @@ public class TrafficLight : MonoBehaviour
 
     public TrafficLightCrosswalk horizontalCrosswalk;
     public TrafficLightCrosswalk verticalCrosswalk;
+    public TrafficLightConfig[] lightConfig;
 
     private List<CarSpawn> _spawners;
 
@@ -27,6 +34,11 @@ public class TrafficLight : MonoBehaviour
     void Start()
     {
         GetComponent<Clickable>().onClickDelegate += OnClick;
+        foreach (TrafficLightConfig config in lightConfig)
+        {
+            if (config.horizontal ^ allowVertical)
+                config.lightAnimator.SetBool("green", !config.lightAnimator.GetBool("green"));
+        }
     }
 
     void OnClick()
@@ -38,6 +50,10 @@ public class TrafficLight : MonoBehaviour
         }
         horizontalCrosswalk.changeLight();
         verticalCrosswalk.changeLight();
+        foreach (TrafficLightConfig config in lightConfig)
+        {
+            config.lightAnimator.SetBool("green", !config.lightAnimator.GetBool("green"));
+        }
         Debug.Log(allowVertical ? "Now Vertical" : "Now Horizontal");
     }
 
