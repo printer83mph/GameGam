@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GuyMovement : MonoBehaviour
 {
@@ -9,10 +10,11 @@ public class GuyMovement : MonoBehaviour
 
     public IdlePoint location;
 
-    public IdlePoint exitLevel;
+    public IdlePoint levelExit;
+
+    public string nextScene;
 
     public float speed;
-
     private bool inMotion;
 
     // Start is called before the first frame update
@@ -24,6 +26,11 @@ public class GuyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!inMotion && location == levelExit)
+        {
+            SceneManager.LoadScene(nextScene);
+        }
+
         //Debug.Log(inMotion ? "moving" : "not moving");
         if (location.isLit && !inMotion)
         {
