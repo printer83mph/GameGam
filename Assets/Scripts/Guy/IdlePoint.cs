@@ -9,6 +9,8 @@ public class IdlePoint : MonoBehaviour
     public IdlePoint[] connectedPoints;
     public Blocker[] allowConnectedPoints;
 
+    public bool hasNoiseOn;
+
     // Start is called before the first frame update
     void Start()
     {
