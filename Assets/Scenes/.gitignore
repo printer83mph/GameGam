@@ -1,3 +1,7 @@
 **/*.asset*
 **/*.exr*
 **/*.png*
+
+*.meta
+!.unity.meta
+!Levels.meta
