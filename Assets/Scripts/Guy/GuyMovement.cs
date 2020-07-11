@@ -7,7 +7,9 @@ public class GuyMovement : MonoBehaviour
 
     public Animator guyAnimator;
 
-    public Transform location;
+    public IdlePoint location;
+
+    public IdlePoint exitLevel;
 
     public float speed;
 
@@ -23,23 +25,22 @@ public class GuyMovement : MonoBehaviour
     void Update()
     {
         //Debug.Log(inMotion ? "moving" : "not moving");
-        IdlePoint locScript = location.GetComponent<IdlePoint>();
-        if (locScript.isLit && !inMotion)
+        if (location.isLit && !inMotion)
         {
             guyAnimator.SetBool("inDarkness", false);
             return;
         } else if (inMotion)
         {
-            transform.position = Vector3.MoveTowards(transform.position, location.position, speed * Time.deltaTime);
-            if (transform.position == location.position) inMotion = false; //if we reached the destinatoin
+            transform.position = Vector3.MoveTowards(transform.position, location.transform.position, speed * Time.deltaTime);
+            if (transform.position == location.transform.position) inMotion = false; //if we reached the destinatoin
         } else
         {
             guyAnimator.SetBool("inDarkness", true);
-            Transform nextLoc;
-            for (int i = 0; i < locScript.connectedPoints.GetLength(0); i++)
+            IdlePoint nextLoc;
+            for (int i = 0; i < location.connectedPoints.GetLength(0); i++)
             {
-                nextLoc = locScript.connectedPoints[i];
-                if (nextLoc.GetComponent<IdlePoint>().isLit && locScript.allowConnectedPoints[i].GetComponent<Blocker>().allowMovement)
+                nextLoc = location.connectedPoints[i];
+                if (nextLoc.isLit && location.allowConnectedPoints[i].GetComponent<Blocker>().allowMovement)
                 {
                     location = nextLoc;
                     inMotion = true;

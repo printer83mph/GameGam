@@ -651,7 +651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLit: 1
   connectedPoints:
-  - {fileID: 940471916}
+  - {fileID: 940471915}
   allowConnectedPoints:
   - {fileID: 293237982}
 --- !u!1 &940471914
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLit: 1
   connectedPoints:
-  - {fileID: 672424814}
+  - {fileID: 672424815}
   allowConnectedPoints:
   - {fileID: 293237982}
 --- !u!4 &940471916
@@ -1005,7 +1005,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guyAnimator: {fileID: 1864231135}
-  location: {fileID: 940471916}
+  location: {fileID: 940471915}
+  exitLevel: {fileID: 0}
   speed: 2
 --- !u!95 &1864231135 stripped
 Animator:
