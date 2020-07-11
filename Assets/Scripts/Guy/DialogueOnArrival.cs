@@ -12,19 +12,24 @@ public class DialogueOnArrival : MonoBehaviour
 
     private GuyMovement mover;
 
+    private bool spawned;
+
     // Start is called before the first frame update
     void Start()
     {
         dialogue.SetActive(false);
         mover = GetComponent<GuyMovement>();
+        spawned = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (spawned) return;
         if (!mover.isMoving() && mover.location == arivalPoint)
         {
             dialogue.SetActive(true);
+            spawned = true;
         }
     }
 }
