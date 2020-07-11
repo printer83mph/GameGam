@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ToggleableLight : MonoBehaviour
 {
 
+    [Tooltip("Set the light's desired intensity in the light component, this boolean will set it on or off on init.")]
     public bool lit;
     public IdlePoint[] idlePoints;
 

@@ -1955,6 +1955,11 @@ PrefabInstance:
       propertyPath: idlePoints.Array.data[1]
       value: 
       objectReference: {fileID: 578950910}
+    - target: {fileID: 4973765665118636056, guid: 989041c71ee7c32448afc566d8e30f92,
+        type: 3}
+      propertyPath: lit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4973765665118636061, guid: 989041c71ee7c32448afc566d8e30f92,
         type: 3}
       propertyPath: m_Name
