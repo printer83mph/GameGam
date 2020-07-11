@@ -7,10 +7,7 @@ using UnityEngine;
 public class LightSwitch : MonoBehaviour
 {
 
-    public IdlePoint[] idlePoints;
-    public Light lightObject;
-
-    public bool isLit;
+    public ToggleableLight[] lights;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +17,9 @@ public class LightSwitch : MonoBehaviour
 
     void OnClick()
     {
-        isLit = !isLit;
-        lightObject.enabled = isLit;
-        foreach (IdlePoint i in idlePoints)
+        foreach (ToggleableLight l in lights)
         {
-            i.isLit = isLit;
+            l.ToggleLit();
         }
-        Debug.Log(isLit ? "lightswitch is on" : "lightswitch is off");
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class IdlePoint : MonoBehaviour
 {
@@ -11,10 +9,9 @@ public class IdlePoint : MonoBehaviour
 
     public bool hasNoiseOn;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetLit(bool lit)
     {
-        
+        isLit = lit;
     }
 
 }

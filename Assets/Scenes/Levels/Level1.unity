@@ -431,6 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258578837}
   - component: {fileID: 258578836}
+  - component: {fileID: 258578838}
   m_Layer: 0
   m_Name: BedroomLight
   m_TagString: Untagged
@@ -513,6 +514,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &258578838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258578835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d299aa15f8f934a8d73e742ce2815c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lit: 1
+  idlePoints:
+  - {fileID: 124660603}
+  - {fileID: 1102981401}
+  - {fileID: 124660603}
+  lightScript: {fileID: 258578836}
 --- !u!1001 &302637424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -729,6 +748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717031131}
   - component: {fileID: 717031130}
+  - component: {fileID: 717031132}
   m_Layer: 0
   m_Name: MainRoomLight
   m_TagString: Untagged
@@ -743,7 +763,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717031129}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
@@ -811,6 +831,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &717031132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717031129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d299aa15f8f934a8d73e742ce2815c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lit: 0
+  idlePoints:
+  - {fileID: 2044157009}
+  - {fileID: 578950910}
+  lightScript: {fileID: 717031130}
 --- !u!1 &741959632
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +936,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615709970801631159, guid: a2f2a7c3c212fd34fbdfbb950a28ab0a,
         type: 3}
+      propertyPath: lights.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615709970801631159, guid: a2f2a7c3c212fd34fbdfbb950a28ab0a,
+        type: 3}
       propertyPath: transforms.Array.data[0]
       value: 
       objectReference: {fileID: 578950911}
@@ -917,6 +959,11 @@ PrefabInstance:
       propertyPath: lightObject
       value: 
       objectReference: {fileID: 717031130}
+    - target: {fileID: 8615709970801631159, guid: a2f2a7c3c212fd34fbdfbb950a28ab0a,
+        type: 3}
+      propertyPath: lights.Array.data[0]
+      value: 
+      objectReference: {fileID: 717031132}
     - target: {fileID: 8615709970801631162, guid: a2f2a7c3c212fd34fbdfbb950a28ab0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1982,6 +2029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615709970801631159, guid: a2f2a7c3c212fd34fbdfbb950a28ab0a,
         type: 3}
+      propertyPath: lights.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615709970801631159, guid: a2f2a7c3c212fd34fbdfbb950a28ab0a,
+        type: 3}
       propertyPath: transforms.Array.data[0]
       value: 
       objectReference: {fileID: 2065241590}
@@ -2005,6 +2057,11 @@ PrefabInstance:
       propertyPath: isLit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8615709970801631159, guid: a2f2a7c3c212fd34fbdfbb950a28ab0a,
+        type: 3}
+      propertyPath: lights.Array.data[0]
+      value: 
+      objectReference: {fileID: 258578838}
     - target: {fileID: 8615709970801631162, guid: a2f2a7c3c212fd34fbdfbb950a28ab0a,
         type: 3}
       propertyPath: m_LocalPosition.x
