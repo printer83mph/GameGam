@@ -7,6 +7,8 @@ public class EndDialogue : MonoBehaviour
 
     public GameObject dialogue;
 
+    public IdlePoint[] postConvoTargetLocations;
+
     // Start is called before the first frame update
     void Start()
     {
