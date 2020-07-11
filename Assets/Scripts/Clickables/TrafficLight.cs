@@ -12,32 +12,33 @@ public class TrafficLight : MonoBehaviour
     public TrafficLightCrosswalk horizontalCrosswalk;
     public TrafficLightCrosswalk verticalCrosswalk;
 
-    private int stoppedCars; //the number of cars currently stopped at the light
-    // Start is called before the first frame update
+    private List<CarSpawn> _spawners;
+
+    private void Awake()
+    {
+        _spawners = new List<CarSpawn>();
+    }
+
+    public void AddSpawner(CarSpawn spawner)
+    {
+        _spawners.Add(spawner);
+    }
+
     void Start()
     {
         GetComponent<Clickable>().onClickDelegate += OnClick;
-        stoppedCars = 0;
     }
 
     void OnClick()
     {
         allowVertical = !allowVertical;
+        foreach (CarSpawn spawner in _spawners)
+        {
+            spawner.ResetStoppedCars();
+        }
         horizontalCrosswalk.changeLight();
         verticalCrosswalk.changeLight();
-        stoppedCars = 0; //previously stopped cars will now move on
         Debug.Log(allowVertical ? "Now Vertical" : "Now Horizontal");
-    }
-
-    public int getStoppedCars()
-    {
-        return stoppedCars;
-    }
-
-    public void addStoppedCar()
-    {
-        stoppedCars++;
-        // Debug.Log(stoppedCars);
     }
 
 }

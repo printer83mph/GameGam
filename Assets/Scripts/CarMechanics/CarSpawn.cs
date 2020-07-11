@@ -16,14 +16,16 @@ public class CarSpawn : MonoBehaviour
     public float stoppingDistance;
     public float extraStoppingDistance; //the extra stopping distance added for each car stopped in front of it
 
-    private float lastSpawnTime;
-    private Transform lastCar;
+    private float _lastSpawnTime;
+    private int _stoppedCars;
+    private Transform _lastCar;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        lastSpawnTime = Time.time;
+        _lastSpawnTime = Time.time;
+        trafficLight.AddSpawner(this);
     }
 
     // Update is called once per frame
@@ -31,13 +33,13 @@ public class CarSpawn : MonoBehaviour
     {
         // has it been long enough?
         float time = Time.time;
-        if(time - lastSpawnTime > carSpawnDelay)
+        if(time - _lastSpawnTime > carSpawnDelay)
         {
             // break out if there are any cars too close
-            if (lastCar != null)
+            if (_lastCar != null)
             {
                 //Debug.Log("The newest car is " + (Vector3.Distance(lastCar.position, transform.position)).ToString() + " from me");
-                if (Vector3.Distance(lastCar.transform.position, transform.position) < extraStoppingDistance)
+                if (Vector3.Distance(_lastCar.transform.position, transform.position) < extraStoppingDistance)
                 {
                     return;
                 }
@@ -49,10 +51,22 @@ public class CarSpawn : MonoBehaviour
             newCarScript.spawner = this;
 
             // plop it into the cars list
-            lastCar = newCar.transform;
+            _lastCar = newCar.transform;
 
             // set last spawn time to current
-            lastSpawnTime = time;
+            _lastSpawnTime = time;
         }
     }
+
+    public void AddStoppedCar()
+    {
+        _stoppedCars++;
+    }
+
+    public void ResetStoppedCars()
+    {
+        _stoppedCars = 0;
+    }
+
+    public int GetStoppedCars => _stoppedCars;
 }

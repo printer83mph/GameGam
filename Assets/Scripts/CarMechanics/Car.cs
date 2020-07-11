@@ -51,7 +51,7 @@ public class Car : MonoBehaviour
                 if (!_stoppedAtLight)
                 {
                     _stoppedAtLight = true;
-                    spawner.trafficLight.addStoppedCar();
+                    spawner.AddStoppedCar();
                 }
             }
             // if we're not there yet
@@ -63,7 +63,7 @@ public class Car : MonoBehaviour
 
     }
 
-    float GetStoppedCarsDistance() => spawner.stoppingDistance + spawner.trafficLight.getStoppedCars() * spawner.extraStoppingDistance;
+    float GetStoppedCarsDistance() => spawner.stoppingDistance + spawner.GetStoppedCars * spawner.extraStoppingDistance;
 
     bool LightAllowsTravel() => spawner.trafficLight.allowVertical == spawner.verticalTravel;
 
