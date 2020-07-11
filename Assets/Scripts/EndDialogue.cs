@@ -24,6 +24,10 @@ public class EndDialogue : MonoBehaviour
     public void endConvo()
     {
         dialogue.SetActive(false);
+        foreach (IdlePoint i in postConvoTargetLocations)
+        {
+            i.hasNoiseOn = true;
+        }
     }
 
 }

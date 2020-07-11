@@ -36,7 +36,7 @@ public class CarSpawn : MonoBehaviour
             // break out if there are any cars too close
             if (lastCar != null)
             {
-                Debug.Log("The newest car is " + (Vector3.Distance(lastCar.position, transform.position)).ToString() + " from me");
+                //Debug.Log("The newest car is " + (Vector3.Distance(lastCar.position, transform.position)).ToString() + " from me");
                 if (Vector3.Distance(lastCar.transform.position, transform.position) < extraStoppingDistance)
                 {
                     return;
