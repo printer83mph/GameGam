@@ -78,4 +78,10 @@ public class GuyMovement : MonoBehaviour
             }*/
         }
     }
+
+    public bool isMoving()
+    {
+        return inMotion;
+    }
+
 }
