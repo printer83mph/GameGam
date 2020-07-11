@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Car : MonoBehaviour
 {
@@ -15,36 +13,36 @@ public class Car : MonoBehaviour
     public bool isVertical;
     public float speed = 10f;
 
-    private bool passedTheLight;
-    private bool stoppedAtLight;
+    private bool _passedTheLight;
+    private bool _stoppedAtLight;
 
     // Start is called before the first frame update
     void Start()
     {
-        passedTheLight = false;
-        stoppedAtLight = false;
+        _passedTheLight = false;
+        _stoppedAtLight = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         TrafficLight tlScript = trafficLight.GetComponent<TrafficLight>();
-        if (Vector3.Distance(transform.position, trafficLight.transform.position) <= stoppingDistance && !passedTheLight)
+        if (Vector3.Distance(transform.position, trafficLight.transform.position) <= stoppingDistance && !_passedTheLight)
         {
             if(tlScript.allowVertical == isVertical) //if the traffic light currently will let this car pass
             {
-                passedTheLight = true;
+                _passedTheLight = true;
             }
         }
-        if (Vector3.Distance(transform.position, trafficLight.transform.position) > stoppingDistance + tlScript.getStoppedCars() * extraStoppingDistance || passedTheLight) //this time also checking if there are stopped cars to look out for
+        if (Vector3.Distance(transform.position, trafficLight.transform.position) > stoppingDistance + tlScript.getStoppedCars() * extraStoppingDistance || _passedTheLight) //this time also checking if there are stopped cars to look out for
         {
             transform.position = Vector3.MoveTowards(transform.position, endPoint.position, speed * Time.deltaTime);
-            stoppedAtLight = false;
+            _stoppedAtLight = false;
         } else
         {
-            if (!stoppedAtLight)
+            if (!_stoppedAtLight)
             {
-                stoppedAtLight = true;
+                _stoppedAtLight = true;
                 tlScript.addStoppedCar();
             }
         }

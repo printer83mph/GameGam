@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CarSpawn : MonoBehaviour
 {
@@ -31,6 +29,7 @@ public class CarSpawn : MonoBehaviour
         float time = Time.time;
         if(time - lastSpawnTime > carSpawnDelay)
         {
+            // TODO: this is messy. should we just use car prefabs instead?
             GameObject newCar = Instantiate(spawnItem, transform.position, transform.rotation);
             Car newCarScript = newCar.GetComponent<Car>();
             newCarScript.endPoint = endPoint;
