@@ -6,9 +6,7 @@ public class IdlePoint : MonoBehaviour
 {
 
     public bool isLit;
-    public Transform topPriority;
-    public Transform secondPriority;
-    public Transform lastPriority;
+    public Transform[] connectedPoints;
 
     // Start is called before the first frame update
     void Start()

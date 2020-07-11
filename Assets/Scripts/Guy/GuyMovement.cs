@@ -35,18 +35,10 @@ public class GuyMovement : MonoBehaviour
         } else
         {
             guyAnimator.SetBool("inDarkness", true);
-            if (locScript.topPriority.GetComponent<IdlePoint>().isLit)
-            {
-                location = locScript.topPriority;
+            foreach(Transform i in locScript.connectedPoints){
+                if (i.GetComponent<IdlePoint>().isLit) location = i;
                 inMotion = true;
-            } else if (locScript.secondPriority.GetComponent<IdlePoint>().isLit)
-            {
-                location = locScript.secondPriority;
-                inMotion = true;
-            } else if (locScript.lastPriority.GetComponent<IdlePoint>().isLit)
-            {
-                location = locScript.lastPriority;
-                inMotion = true;
+                return;
             }
         }
     }
