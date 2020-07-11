@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 289005913473654797}
+  - component: {fileID: 5322012355987267313}
   m_Layer: 0
   m_Name: Guy
   m_TagString: Untagged
@@ -32,6 +33,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5322012355987267313
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101431324614720183}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14b919291a3c00d439673934f0ad34ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3513784749207027192
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +125,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7650978436869197290}
   - component: {fileID: 4975009805453479253}
-  - component: {fileID: 8160755437070386532}
   m_Layer: 0
   m_Name: Guy
   m_TagString: Untagged
@@ -181,25 +200,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0.009080809, z: 0}
     m_Extent: {x: 0.0033532158, y: 0.008976243, z: 0.0033532141}
   m_DirtyAABB: 0
---- !u!95 &8160755437070386532
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6826926758523727133}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 14b919291a3c00d439673934f0ad34ad, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8256077375077035823
 GameObject:
   m_ObjectHideFlags: 0
