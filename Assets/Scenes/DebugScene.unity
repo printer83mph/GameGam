@@ -673,16 +673,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1011058129736173738, guid: 781da311e66d49845adfc39e4b3f0840,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011058129736173738, guid: 781da311e66d49845adfc39e4b3f0840,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1011058131153642805, guid: 781da311e66d49845adfc39e4b3f0840,
         type: 3}
       propertyPath: m_Name
@@ -745,36 +735,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1011058131153642807, guid: 781da311e66d49845adfc39e4b3f0840,
         type: 3}
-      propertyPath: SpawnItem
-      value: 
-      objectReference: {fileID: 3794619278845120056, guid: 221ef30489e51054c97e2c79cfaa9f72,
-        type: 3}
-    - target: {fileID: 1011058131153642807, guid: 781da311e66d49845adfc39e4b3f0840,
-        type: 3}
-      propertyPath: endPoint
-      value: 
-      objectReference: {fileID: 936390578}
-    - target: {fileID: 1011058131153642807, guid: 781da311e66d49845adfc39e4b3f0840,
-        type: 3}
       propertyPath: trafficLight
       value: 
       objectReference: {fileID: 1898849903}
-    - target: {fileID: 1011058131153642807, guid: 781da311e66d49845adfc39e4b3f0840,
-        type: 3}
-      propertyPath: spawnItem
-      value: 
-      objectReference: {fileID: 3794619278845120056, guid: 221ef30489e51054c97e2c79cfaa9f72,
-        type: 3}
-    - target: {fileID: 1011058131153642807, guid: 781da311e66d49845adfc39e4b3f0840,
-        type: 3}
-      propertyPath: stoppingDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011058131153642807, guid: 781da311e66d49845adfc39e4b3f0840,
-        type: 3}
-      propertyPath: extraStoppingDistance
-      value: 12
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 781da311e66d49845adfc39e4b3f0840, type: 3}
 --- !u!1001 &3794619278352656686
@@ -864,6 +827,11 @@ PrefabInstance:
       propertyPath: isVertical
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8245563396541502321, guid: 221ef30489e51054c97e2c79cfaa9f72,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f268863e82cc3d2439043d0e7fa9557b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 221ef30489e51054c97e2c79cfaa9f72, type: 3}
 --- !u!1001 &6734158517258128765

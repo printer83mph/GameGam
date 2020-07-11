@@ -12,6 +12,7 @@ public class CarSpawn : MonoBehaviour
 
     public bool verticalTravel;
 
+    public float carSpawnDelay = .7f;
     public float stoppingDistance;
     public float extraStoppingDistance; //the extra stopping distance added for each car stopped in front of it
 
@@ -28,7 +29,7 @@ public class CarSpawn : MonoBehaviour
     void Update()
     {
         float time = Time.time;
-        if(time - lastSpawnTime > 2)
+        if(time - lastSpawnTime > carSpawnDelay)
         {
             GameObject newCar = Instantiate(spawnItem, transform.position, transform.rotation);
             Car newCarScript = newCar.GetComponent<Car>();

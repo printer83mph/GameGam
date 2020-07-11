@@ -13,8 +13,7 @@ public class Car : MonoBehaviour
     public float extraStoppingDistance;
 
     public bool isVertical;
-
-    private float speed;
+    public float speed = 10f;
 
     private bool passedTheLight;
     private bool stoppedAtLight;
@@ -22,7 +21,6 @@ public class Car : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 10f;
         passedTheLight = false;
         stoppedAtLight = false;
     }

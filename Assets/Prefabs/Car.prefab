@@ -49,6 +49,7 @@ MonoBehaviour:
   stoppingDistance: 0
   extraStoppingDistance: 0
   isVertical: 0
+  speed: 25
 --- !u!95 &8245563396541502321
 Animator:
   serializedVersion: 3
