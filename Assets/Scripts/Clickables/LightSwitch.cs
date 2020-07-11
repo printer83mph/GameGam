@@ -7,7 +7,8 @@ using UnityEngine;
 public class LightSwitch : MonoBehaviour
 {
 
-    public Transform[] transforms;
+    public IdlePoint[] idlePoints;
+    public Light lightObject;
 
     public bool isLit;
 
@@ -20,9 +21,10 @@ public class LightSwitch : MonoBehaviour
     void OnClick()
     {
         isLit = !isLit;
-        foreach (Transform i in transforms)
+        lightObject.enabled = isLit;
+        foreach (IdlePoint i in idlePoints)
         {
-            i.GetComponent<IdlePoint>().isLit = isLit;
+            i.isLit = isLit;
         }
         Debug.Log(isLit ? "lightswitch is on" : "lightswitch is off");
     }
