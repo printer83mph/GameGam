@@ -2,6 +2,6 @@
 **/*.exr*
 **/*.png*
 
-*.meta
-!.unity.meta
+**/*.meta
+!**/.unity.meta
 !Levels.meta
