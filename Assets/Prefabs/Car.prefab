@@ -44,11 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d2718a7dd9c854dbefbc8d0893b54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 0}
-  trafficLight: {fileID: 0}
-  stoppingDistance: 0
-  extraStoppingDistance: 0
-  isVertical: 0
+  spawner: {fileID: 0}
   speed: 25
 --- !u!95 &8245563396541502321
 Animator:
@@ -89,7 +85,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 40b1db098592cb449a5e51cf535be83e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 40b1db098592cb449a5e51cf535be83e,
         type: 3}

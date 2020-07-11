@@ -3,14 +3,7 @@
 public class Car : MonoBehaviour
 {
 
-    public Transform endPoint;
-
-    public GameObject trafficLight;
-
-    public float stoppingDistance;
-    public float extraStoppingDistance;
-
-    public bool isVertical;
+    public CarSpawn spawner;
     public float speed = 10f;
 
     private bool _passedTheLight;
@@ -26,30 +19,64 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TrafficLight tlScript = trafficLight.GetComponent<TrafficLight>();
-        if (Vector3.Distance(transform.position, trafficLight.transform.position) <= stoppingDistance && !_passedTheLight)
+        if (_passedTheLight)
         {
-            if(tlScript.allowVertical == isVertical) //if the traffic light currently will let this car pass
-            {
-                _passedTheLight = true;
-            }
+            MoveTowardsEnd();
+            CheckDespawn();
+            return;
         }
-        if (Vector3.Distance(transform.position, trafficLight.transform.position) > stoppingDistance + tlScript.getStoppedCars() * extraStoppingDistance || _passedTheLight) //this time also checking if there are stopped cars to look out for
+
+        // if light is green
+        if (LightAllowsTravel())
         {
-            transform.position = Vector3.MoveTowards(transform.position, endPoint.position, speed * Time.deltaTime);
             _stoppedAtLight = false;
-        } else
-        {
-            if (!_stoppedAtLight)
+            // if close enough to traffic light
+            if (Vector3.Distance(transform.position, spawner.trafficLight.transform.position) < spawner.stoppingDistance)
             {
-                _stoppedAtLight = true;
-                tlScript.addStoppedCar();
+                // we've passed the light
+                _passedTheLight = true;
+                MoveTowardsEnd();
+            } else
+            {
+                MoveTowardsEnd();
             }
         }
-        if (transform.position == endPoint.position)
+        // if light is red and we're not past the light
+        else
+        {
+            // if close enough to other stopped cars
+            if (Vector3.Distance(transform.position, spawner.trafficLight.transform.position) < GetStoppedCarsDistance())
+            {
+                // dont move and set stopped at light to true
+                if (!_stoppedAtLight)
+                {
+                    _stoppedAtLight = true;
+                    spawner.trafficLight.addStoppedCar();
+                }
+            }
+            // if we're not there yet
+            else
+            {
+                MoveTowardsEnd();
+            }
+        }
+
+    }
+
+    float GetStoppedCarsDistance() => spawner.stoppingDistance + spawner.trafficLight.getStoppedCars() * spawner.extraStoppingDistance;
+
+    bool LightAllowsTravel() => spawner.trafficLight.allowVertical == spawner.verticalTravel;
+
+    void MoveTowardsEnd()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, spawner.endPoint.position, speed * Time.deltaTime);
+    }
+    void CheckDespawn()
+    {
+        // despawn if at end
+        if (transform.position == spawner.endPoint.position)
         {
             Destroy(gameObject);
         }
-
     }
 }

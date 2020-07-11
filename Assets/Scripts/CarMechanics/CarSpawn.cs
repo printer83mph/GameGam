@@ -1,12 +1,14 @@
-﻿using UnityEngine;
+﻿using Boo.Lang;
+using System.Linq;
+using UnityEngine;
 
 public class CarSpawn : MonoBehaviour
 {
 
-    public GameObject spawnItem;
+    public GameObject[] spawnItems;
     public Transform endPoint;
 
-    public GameObject trafficLight;
+    public TrafficLight trafficLight;
 
     public bool verticalTravel;
 
@@ -15,6 +17,7 @@ public class CarSpawn : MonoBehaviour
     public float extraStoppingDistance; //the extra stopping distance added for each car stopped in front of it
 
     private float lastSpawnTime;
+    private Transform lastCar;
 
 
     // Start is called before the first frame update
@@ -26,17 +29,29 @@ public class CarSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // has it been long enough?
         float time = Time.time;
         if(time - lastSpawnTime > carSpawnDelay)
         {
-            // TODO: this is messy. should we just use car prefabs instead?
-            GameObject newCar = Instantiate(spawnItem, transform.position, transform.rotation);
+            // break out if there are any cars too close
+            if (lastCar != null)
+            {
+                Debug.Log("The newest car is " + (Vector3.Distance(lastCar.position, transform.position)).ToString() + " from me");
+                if (Vector3.Distance(lastCar.transform.position, transform.position) < extraStoppingDistance)
+                {
+                    return;
+                }
+            }
+
+            int index = Random.Range(0, spawnItems.Length);
+            GameObject newCar = Instantiate(spawnItems[index], transform.position, transform.rotation);
             Car newCarScript = newCar.GetComponent<Car>();
-            newCarScript.endPoint = endPoint;
-            newCarScript.trafficLight = trafficLight;
-            newCarScript.isVertical = verticalTravel;
-            newCarScript.stoppingDistance = stoppingDistance;
-            newCarScript.extraStoppingDistance = extraStoppingDistance;
+            newCarScript.spawner = this;
+
+            // plop it into the cars list
+            lastCar = newCar.transform;
+
+            // set last spawn time to current
             lastSpawnTime = time;
         }
     }

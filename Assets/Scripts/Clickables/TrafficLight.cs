@@ -32,7 +32,7 @@ public class TrafficLight : MonoBehaviour
     public void addStoppedCar()
     {
         stoppedCars++;
-        Debug.Log(stoppedCars);
+        // Debug.Log(stoppedCars);
     }
 
 }
