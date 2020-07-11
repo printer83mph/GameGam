@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Clickable))]
+[RequireComponent(typeof(Blocker))]
 
 public class Door : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Door : MonoBehaviour
     void OnClick()
     {
         locked = !locked;
+        GetComponent<Blocker>().switchMode();
         Debug.Log(locked ? "Now Locked" : "Now Unlocked");
     }
 

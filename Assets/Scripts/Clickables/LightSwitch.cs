@@ -24,5 +24,6 @@ public class LightSwitch : MonoBehaviour
         {
             i.GetComponent<IdlePoint>().isLit = isLit;
         }
+        Debug.Log(isLit ? "lightswitch is on" : "lightswitch is off");
     }
 }
