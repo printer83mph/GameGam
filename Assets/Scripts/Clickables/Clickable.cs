@@ -11,6 +11,12 @@ public class Clickable : MonoBehaviour
     {
         // give it our own method first (to avoid null pointer exception)
         onClickDelegate += OnClick;
+
+    }
+
+    private void OnMouseEnter()
+    {
+        Debug.Log("entered");
     }
 
     void OnMouseDown()
