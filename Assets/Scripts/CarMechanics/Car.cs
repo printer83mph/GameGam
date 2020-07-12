@@ -64,8 +64,10 @@ public class Car : MonoBehaviour
 
     float GetStoppedCarsDistance() => spawner.stoppingDistance + spawner.GetStoppedCars * spawner.extraStoppingDistance;
 
-    bool LightAllowsTravel() => spawner.trafficLight.allowVertical == spawner.verticalTravel;
-
+    private bool LightAllowsTravel()
+    {
+        return ( spawner.trafficLight.inYellow() ? false : spawner.trafficLight.allowVertical == spawner.verticalTravel);
+    }
     void MoveTowardsEnd()
     {
         transform.position = Vector3.MoveTowards(transform.position, spawner.endPoint.position, speed * Time.deltaTime);

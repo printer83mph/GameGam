@@ -558,6 +558,11 @@ PrefabInstance:
       propertyPath: lightConfig.Array.data[3].horizontal
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4885277580613980371, guid: 8b8b3706daf052649a3ef1ab990263db,
+        type: 3}
+      propertyPath: yellowDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8875535269119901439, guid: 8b8b3706daf052649a3ef1ab990263db,
         type: 3}
       propertyPath: m_Size.x

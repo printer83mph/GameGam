@@ -21,9 +21,15 @@ public class TrafficLight : MonoBehaviour
 
     private List<CarSpawn> _spawners;
 
+    public float yellowDuration;
+    private float _lastResetTime;
+    private bool _yellow;
+
     private void Awake()
     {
         _spawners = new List<CarSpawn>();
+        _lastResetTime = Time.time;
+        _yellow = false;
     }
 
     public void AddSpawner(CarSpawn spawner)
@@ -41,13 +47,22 @@ public class TrafficLight : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (!_yellow) return;
+        if (_lastResetTime + yellowDuration < Time.time)
+        {
+            _yellow = false;
+        }
+    }
+
     void OnClick()
     {
+        _lastResetTime = Time.time;
+        _yellow = true;
+
         allowVertical = !allowVertical;
-        foreach (CarSpawn spawner in _spawners)
-        {
-            spawner.ResetStoppedCars();
-        }
+
         horizontalCrosswalk.changeLight();
         verticalCrosswalk.changeLight();
         foreach (TrafficLightConfig config in lightConfig)
@@ -55,6 +70,19 @@ public class TrafficLight : MonoBehaviour
             config.lightAnimator.SetBool("green", !config.lightAnimator.GetBool("green"));
         }
         Debug.Log(allowVertical ? "Now Vertical" : "Now Horizontal");
+    }
+
+    public bool inYellow()
+    {
+        return  _yellow;
+    }
+
+    private void ResetStoppedCars()
+    {
+        foreach (CarSpawn spawner in _spawners)
+        {
+            spawner.ResetStoppedCars();
+        }
     }
 
 }
