@@ -11,6 +11,7 @@ public class GuyMovement : MonoBehaviour
     public IdlePoint location;
 
     public IdlePoint levelExit;
+    public LevelTransitioner transitioner; 
 
     public string nextScene;
 
@@ -28,7 +29,8 @@ public class GuyMovement : MonoBehaviour
     {
         if (!inMotion && location == levelExit)
         {
-            SceneManager.LoadScene(nextScene);
+            if (transitioner == null) SceneManager.LoadScene(nextScene);
+            else transitioner.FadeToLevel(nextScene);
         }
 
         //Debug.Log(inMotion ? "moving" : "not moving");
