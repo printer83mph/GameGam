@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 8615709970801631156}
   - component: {fileID: 8615709970801631158}
   - component: {fileID: 8615709970801631159}
-  - component: {fileID: 1220522800}
+  - component: {fileID: 7095226838625094320}
   m_Layer: 0
   m_Name: LightSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8615709970801631162
 Transform:
@@ -106,12 +106,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c70b51e71cf5ed41ba6743a0c47ff3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flicked: 0
   lights:
   - {fileID: 0}
   onMesh: {fileID: -4492110287655483137, guid: 3d4fc70d4630e164d85ec713925a90b0, type: 3}
   offMesh: {fileID: 2958480244141377670, guid: cbb4094a542dc714a8ca66d396a95d94, type: 3}
---- !u!135 &1220522800
-SphereCollider:
+--- !u!65 &7095226838625094320
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -121,5 +122,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
-  m_Center: {x: 0, y: 0, z: 0.021811135}
+  m_Size: {x: 0.33, y: 0.44, z: 0.17}
+  m_Center: {x: 0, y: 0, z: 0.06}
