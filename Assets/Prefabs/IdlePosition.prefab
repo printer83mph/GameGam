@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: IdlePosition
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6994179dcd2224db0e3393845c84a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLit: 0
   connectedPoints: []
   allowConnectedPoints: []
+  onByDefault: 0
   hasNoiseOn: 0
