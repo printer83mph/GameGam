@@ -32,7 +32,7 @@ public class GuyMovement : MonoBehaviour
         }
 
         //Debug.Log(inMotion ? "moving" : "not moving");
-        if (location.isLit && !inMotion)
+        if (location.isLit() && !inMotion)
         {
             location.hasNoiseOn = false; //if we are arriving at a noisy place, turn the noise off
             guyAnimator.SetBool("annoyingNoise", false);
@@ -41,7 +41,7 @@ public class GuyMovement : MonoBehaviour
             for (int i = 0; i < location.connectedPoints.GetLength(0); i++)
             {
                 nextLoc = location.connectedPoints[i];
-                if (nextLoc.isLit && nextLoc.hasNoiseOn)
+                if (nextLoc.isLit() && nextLoc.hasNoiseOn)
                 {
                     guyAnimator.SetBool("annoyingNoise", true);
                     if (location.allowConnectedPoints[i].allowMovement)
@@ -63,7 +63,7 @@ public class GuyMovement : MonoBehaviour
             for (int i = 0; i < location.connectedPoints.GetLength(0); i++)
             {
                 nextLoc = location.connectedPoints[i];
-                if (nextLoc.isLit && location.allowConnectedPoints[i].allowMovement)
+                if (nextLoc.isLit() && location.allowConnectedPoints[i].allowMovement)
                 {
                     location = nextLoc;
                     inMotion = true;
