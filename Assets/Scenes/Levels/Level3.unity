@@ -466,7 +466,6 @@ GameObject:
   - component: {fileID: 73267669}
   - component: {fileID: 73267668}
   - component: {fileID: 73267667}
-  - component: {fileID: 73267666}
   m_Layer: 0
   m_Name: Streetlight (2)
   m_TagString: Untagged
@@ -474,18 +473,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &73267666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73267665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &73267667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1131,7 +1118,6 @@ GameObject:
   - component: {fileID: 188563153}
   - component: {fileID: 188563152}
   - component: {fileID: 188563151}
-  - component: {fileID: 188563150}
   m_Layer: 0
   m_Name: Streetlight (3)
   m_TagString: Untagged
@@ -1139,18 +1125,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &188563150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188563149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &188563151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3820,7 +3794,6 @@ GameObject:
   - component: {fileID: 751634887}
   - component: {fileID: 751634886}
   - component: {fileID: 751634885}
-  - component: {fileID: 751634884}
   m_Layer: 0
   m_Name: Streetlight (4)
   m_TagString: Untagged
@@ -3828,18 +3801,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &751634884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 751634883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &751634885
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4421,7 +4382,6 @@ GameObject:
   - component: {fileID: 854760540}
   - component: {fileID: 854760539}
   - component: {fileID: 854760538}
-  - component: {fileID: 854760537}
   m_Layer: 0
   m_Name: Streetlight (7)
   m_TagString: Untagged
@@ -4429,18 +4389,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &854760537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854760536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &854760538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5325,7 +5273,6 @@ GameObject:
   - component: {fileID: 1181857677}
   - component: {fileID: 1181857676}
   - component: {fileID: 1181857675}
-  - component: {fileID: 1181857674}
   m_Layer: 0
   m_Name: Streetlight (6)
   m_TagString: Untagged
@@ -5333,18 +5280,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &1181857674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181857673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1181857675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5791,7 +5726,6 @@ GameObject:
   - component: {fileID: 1234501065}
   - component: {fileID: 1234501064}
   - component: {fileID: 1234501063}
-  - component: {fileID: 1234501062}
   m_Layer: 0
   m_Name: Streetlight (8)
   m_TagString: Untagged
@@ -5799,18 +5733,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &1234501062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234501061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1234501063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6334,7 +6256,6 @@ GameObject:
   - component: {fileID: 1355200884}
   - component: {fileID: 1355200883}
   - component: {fileID: 1355200882}
-  - component: {fileID: 1355200881}
   m_Layer: 0
   m_Name: Streetlight (1)
   m_TagString: Untagged
@@ -6342,18 +6263,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &1355200881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355200880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1355200882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7047,7 +6956,6 @@ GameObject:
   - component: {fileID: 1549231351}
   - component: {fileID: 1549231350}
   - component: {fileID: 1549231349}
-  - component: {fileID: 1549231348}
   m_Layer: 0
   m_Name: Streetlight (5)
   m_TagString: Untagged
@@ -7055,18 +6963,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &1549231348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1549231347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1549231349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7154,7 +7050,6 @@ GameObject:
   - component: {fileID: 1570817110}
   - component: {fileID: 1570817109}
   - component: {fileID: 1570817108}
-  - component: {fileID: 1570817114}
   m_Layer: 0
   m_Name: Streetlight
   m_TagString: Untagged
@@ -7237,18 +7132,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1570817114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570817107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1589049472
 GameObject:
   m_ObjectHideFlags: 0
