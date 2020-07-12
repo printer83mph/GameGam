@@ -10,6 +10,8 @@ public class NoiseMaker : MonoBehaviour
 
     public IdlePoint pointOfNoise;
 
+    private bool _used;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,9 @@ public class NoiseMaker : MonoBehaviour
 
     void OnClick()
     {
+        if (_used) return;
         pointOfNoise.hasNoiseOn = true;
+        _used = true;
         Debug.Log("Setting Noise On");
     }
 }
