@@ -11,7 +11,7 @@ public class IdlePoint : MonoBehaviour
 
     private int _lightsOnMe;
 
-    void Start()
+    void Awake()
     {
         _lightsOnMe = onByDefault ? 1 : 0;
     }
