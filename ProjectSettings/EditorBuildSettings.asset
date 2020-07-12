@@ -5,34 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/CharacterMovingDebug.unity
-    guid: 04c3ec90af7b6244c8cbad554b26e92e
-  - enabled: 0
-    path: Assets/Scenes/DebugScene.unity
-    guid: 3eae3c1dcc3f98e419fba2d2877939d7
   - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: 10aacc66ea832e6429a9fadf9f4bea0f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Levels/Level3.unity
-    guid: fad1eabf2d4f49a41b8452c540e8d4c0
+    guid: 60c79c1817db9f146a4047bf7960f3b9
   - enabled: 1
     path: Assets/Scenes/Levels/Level2.unity
-    guid: 2d87b6af047aa91479856169e6383f41
-  - enabled: 1
-    path: Assets/Scenes/Levels/DialogueFail.unity
-    guid: 131a768a782cf904f972a833d8c92b2d
+    guid: bab608d4abdf29647bdce782661bdadb
   m_configObjects: {}
