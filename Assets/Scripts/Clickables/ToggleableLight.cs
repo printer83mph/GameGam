@@ -21,6 +21,11 @@ public class ToggleableLight : MonoBehaviour
         SetLit(lit);
     }
 
+    private void Update()
+    {
+        if (lit) SetLit(lit);
+    }
+
     public void ToggleLit()
     {
         SetLit(!lit);

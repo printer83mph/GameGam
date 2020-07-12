@@ -10,7 +10,7 @@ public class MouseFollowCam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _initialRotation = transform.rotation;
+        _initialRotation = transform.localRotation;
     }
 
     private void Update()
@@ -19,7 +19,7 @@ public class MouseFollowCam : MonoBehaviour
         float mouseY = (Input.mousePosition.y / Screen.height - .5f) * trackInfluence;
         Quaternion desiredRotationAddition = Quaternion.Euler(-mouseY, mouseX, 0);
 
-        transform.rotation = _initialRotation * desiredRotationAddition;
+        transform.localRotation = _initialRotation * desiredRotationAddition;
     }
 
 }

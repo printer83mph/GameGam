@@ -23,6 +23,10 @@ public class ToggleCameras : MonoBehaviour
     {
         _mover = GetComponent<GuyMovement>();
         _targetTransform = camConfigs[0].cameraPos;
+        foreach (CameraConfig i in camConfigs)
+        {
+            i.cameraPos.GetComponent<Camera>().enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -36,7 +40,7 @@ public class ToggleCameras : MonoBehaviour
             }
         }
 
-        _camera.position = MathUtil.Damp(_camera.position, _targetTransform.position, 8f, Time.deltaTime);
+        _camera.position = MathUtil.Damp(_camera.position, _targetTransform.position, 3f, Time.deltaTime);
         _camera.rotation = MathUtil.Damp(_camera.rotation, _targetTransform.rotation, 2f, Time.deltaTime);
     }
 }

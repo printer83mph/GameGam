@@ -20,7 +20,7 @@ public class MathUtil : MonoBehaviour
 
     public static Quaternion Damp(Quaternion a, Quaternion b, float lambda, float dt)
     {
-        return Quaternion.Lerp(a, b, 1 - Mathf.Exp(-lambda * dt));
+        return Quaternion.Slerp(a, b, 1 - Mathf.Exp(-lambda * dt));
     }
 
 }
