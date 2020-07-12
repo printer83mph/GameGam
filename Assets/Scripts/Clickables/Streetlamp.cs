@@ -4,33 +4,32 @@ public class Streetlamp : MonoBehaviour
 {
     public bool flicked;
     public ToggleableLight[] lights;
+    public MeshRenderer meshRenderer;
     public Material onMaterial;
     public Material offMaterial;
-
-    private MeshRenderer _meshRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        _meshRenderer = GetComponent<MeshRenderer>();
         GetComponent<Clickable>().onClickDelegate += OnClick;
-        UpdateMaterials();
+        UpdateMaterials(flicked);
     }
 
     void OnClick()
     {
         flicked = !flicked;
-        UpdateMaterials();
+        bool lightOn = false;
         foreach (ToggleableLight l in lights)
         {
-            l.ToggleLit();
+            lightOn = l.ToggleLit();
         }
+        UpdateMaterials(lightOn);
     }
 
-    void UpdateMaterials()
+    void UpdateMaterials(bool lightOn)
     {
-        Material[] matArray = _meshRenderer.materials;
-        matArray[1] = flicked ? onMaterial : offMaterial;
-        _meshRenderer.materials = matArray;
+        Material[] matArray = meshRenderer.materials;
+        matArray[1] = lightOn ? onMaterial : offMaterial;
+        meshRenderer.materials = matArray;
     }
 }

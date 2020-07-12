@@ -26,10 +26,11 @@ public class ToggleableLight : MonoBehaviour
 
     }
 
-    public void ToggleLit()
+    public bool ToggleLit()
     {
         SetLit(!lit);
         //Debug.Log("Now " + lit.ToString());
+        return lit;
     }
 
     public void SetLit(bool isLit)

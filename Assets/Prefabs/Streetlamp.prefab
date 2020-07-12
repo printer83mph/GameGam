@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1536086994311748381}
   - component: {fileID: 1536086994311748378}
   m_Layer: 0
-  m_Name: streetlamp_on (1)
+  m_Name: Streetlamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: af4d9bceef615ad478a4fc4f82def262, type: 2}
-  - {fileID: 2100000, guid: 3cd4c5a9838dc804e932abb45814fb78, type: 2}
+  - {fileID: 2100000, guid: 18ee1489470a5eb49910171602525dff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   flicked: 1
   lights:
   - {fileID: 1536086995763737154}
+  meshRenderer: {fileID: 1536086994311748380}
   onMaterial: {fileID: 2100000, guid: 3cd4c5a9838dc804e932abb45814fb78, type: 2}
   offMaterial: {fileID: 2100000, guid: 18ee1489470a5eb49910171602525dff, type: 2}
 --- !u!1 &1536086995763737152
