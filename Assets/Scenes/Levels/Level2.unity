@@ -5255,6 +5255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4809023137983035036, guid: 151d725c97037ed4ea38f9991b908bec,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e1c0f40e6b46b604f81aafb21a8831fb, type: 2}
     - target: {fileID: 4866793000883514883, guid: 151d725c97037ed4ea38f9991b908bec,
         type: 3}
       propertyPath: location

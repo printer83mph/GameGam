@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17996167, g: 0.22532396, b: 0.3067176, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2858,6 +2858,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4809023137983035036, guid: 151d725c97037ed4ea38f9991b908bec,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e1c0f40e6b46b604f81aafb21a8831fb, type: 2}
     - target: {fileID: 4866793000883514883, guid: 151d725c97037ed4ea38f9991b908bec,
         type: 3}
       propertyPath: location
@@ -6789,7 +6794,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 913b8a32d9597fd43a66f78354635741,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.389405
+      value: -11.71
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 913b8a32d9597fd43a66f78354635741,
         type: 3}
