@@ -25,7 +25,8 @@ public class ToggleCameras : MonoBehaviour
         _targetTransform = camConfigs[0].cameraPos;
         foreach (CameraConfig i in camConfigs)
         {
-            i.cameraPos.GetComponent<Camera>().enabled = false;
+            Camera cam = i.cameraPos.GetComponent<Camera>();
+            if (cam != null) cam.enabled = false;
         }
     }
 

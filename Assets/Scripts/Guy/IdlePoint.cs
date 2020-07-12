@@ -6,13 +6,14 @@ public class IdlePoint : MonoBehaviour
     public IdlePoint[] connectedPoints;
     public Blocker[] allowConnectedPoints;
 
+    public bool onByDefault;
     public bool hasNoiseOn;
 
     private int _lightsOnMe;
 
-    public void Setup()
+    void Start()
     {
-        _lightsOnMe = 0;
+        _lightsOnMe = onByDefault ? 1 : 0;
     }
 
     public void SetLit(bool lit)
@@ -40,7 +41,7 @@ public class IdlePoint : MonoBehaviour
         _lightsOnMe++;
     }
 
-    public void removeLight()
+     public void removeLight()
     {
         _lightsOnMe--;
     }
