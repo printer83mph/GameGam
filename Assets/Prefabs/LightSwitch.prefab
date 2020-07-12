@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef446b7d1fdee74b98b22a5d576f553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 4754545745417805927, guid: 0178817f027ff2e488a7a51c1d8b19ca, type: 3}
 --- !u!114 &8615709970801631159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +112,8 @@ MonoBehaviour:
   - {fileID: 0}
   onMesh: {fileID: -4492110287655483137, guid: 3d4fc70d4630e164d85ec713925a90b0, type: 3}
   offMesh: {fileID: 2958480244141377670, guid: cbb4094a542dc714a8ca66d396a95d94, type: 3}
+  turnOn: {fileID: 5886945417624245186, guid: 9a49263a80d0cd64d8ebe2c9f21ea5d5, type: 3}
+  turnOff: {fileID: 7647617388866896599, guid: 47bba1098278a9d49b96b58bf096b1b8, type: 3}
 --- !u!65 &7095226838625094320
 BoxCollider:
   m_ObjectHideFlags: 0

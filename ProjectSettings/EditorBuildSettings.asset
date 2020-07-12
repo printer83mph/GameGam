@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/BadEnding.unity
     guid: d3216bc973023ed4f9e6d1f46fa9b643
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level4.unity
+    guid: 49f12fabce1af9a4db813dcd8f22ab94
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level5.unity
+    guid: de82a064092eb1d4fa519d507bce20bd
   m_configObjects: {}

@@ -14,6 +14,9 @@ public class LightSwitch : MonoBehaviour
 
     private MeshFilter _meshFilter;
 
+    public AudioSource turnOn;
+    public AudioSource turnOff;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class LightSwitch : MonoBehaviour
     void OnClick()
     {
         flicked = !flicked;
+
         SetMesh();
         foreach (ToggleableLight l in lights)
         {
