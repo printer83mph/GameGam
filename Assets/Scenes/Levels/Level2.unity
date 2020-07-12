@@ -1874,6 +1874,11 @@ PrefabInstance:
       propertyPath: nextScene
       value: Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 4866793000883514883, guid: 151d725c97037ed4ea38f9991b908bec,
+        type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 151d725c97037ed4ea38f9991b908bec, type: 3}
 --- !u!1001 &416403796
@@ -3023,7 +3028,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a79de888da53cfc4a925af5ea0104494,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.251324
+      value: -17.79132
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a79de888da53cfc4a925af5ea0104494,
         type: 3}
@@ -3033,7 +3038,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a79de888da53cfc4a925af5ea0104494,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.09834957
+      value: 0.341651
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a79de888da53cfc4a925af5ea0104494,
         type: 3}
