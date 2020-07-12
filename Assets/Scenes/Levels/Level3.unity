@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 605951827}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.219789, g: 0.21833786, b: 0.22303739, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -600,6 +600,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sheet_metal_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2b8e05893a9792a4e84024d5a1a0f43a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b8e05893a9792a4e84024d5a1a0f43a, type: 3}
@@ -1471,6 +1476,8 @@ MonoBehaviour:
   - {fileID: 0}
   onMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   offMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  turnOn: {fileID: 0}
+  turnOff: {fileID: 0}
 --- !u!114 &360362347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,6 +2008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: rubbermat
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0457220672062d4488d7a61e3d9bba6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0457220672062d4488d7a61e3d9bba6, type: 3}
@@ -2753,6 +2765,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sheet_metal_2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1340a98bea1c78b43afcc45f40354032,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1340a98bea1c78b43afcc45f40354032, type: 3}
 --- !u!4 &707033704 stripped
@@ -2941,6 +2958,8 @@ MonoBehaviour:
   - {fileID: 0}
   onMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   offMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  turnOn: {fileID: 0}
+  turnOff: {fileID: 0}
 --- !u!114 &733726530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6296,6 +6315,8 @@ MonoBehaviour:
   - {fileID: 0}
   onMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   offMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  turnOn: {fileID: 0}
+  turnOff: {fileID: 0}
 --- !u!114 &1397516467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8976,6 +8997,8 @@ MonoBehaviour:
   - {fileID: 0}
   onMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   offMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  turnOn: {fileID: 0}
+  turnOff: {fileID: 0}
 --- !u!114 &2036060649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9318,6 +9341,8 @@ MonoBehaviour:
   - {fileID: 0}
   onMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   offMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  turnOn: {fileID: 0}
+  turnOff: {fileID: 0}
 --- !u!114 &2047054306
 MonoBehaviour:
   m_ObjectHideFlags: 0
